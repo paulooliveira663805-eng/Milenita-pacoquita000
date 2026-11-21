@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Milenita Paçoquita 67</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ background:linear-gradient(135deg,#ff00a8,#7200ff,#00d9ff);
+ color:white;
+ font-family:Arial,sans-serif;
+ text-align:center;
+ min-height:100vh;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+}
+.game{
+ width:92%;
+ max-width:420px;
+ padding:25px;
+ border:3px solid white;
+ border-radius:25px;
+ background:#16002dcc;
+ box-shadow:0 0 30px #fff;
+}
+h1{font-size:34px;text-shadow:3px 3px #ff008c}
+#number{font-size:100px;font-weight:900;margin:20px}
+button{
+ background:#ffdf00;
+ border:0;
+ padding:15px 28px;
+ border-radius:15px;
+ font-size:20px;
+ font-weight:bold;
+ cursor:pointer;
+}
+button:active{transform:scale(.9)}
+#message{font-size:20px;min-height:55px}
+#score{font-size:22px}
+</style>
+</head>
+<body>
+<div class="game">
+<h1>🥜 MILENITA PAÇOQUITA</h1>
+<h2>DESAFIO 67 💀</h2>
+<div id="number">67</div>
+<p id="message">Clique para começar essa loucura!</p>
+<p id="score">Pontos: 0</p>
+<button onclick="play()">PAÇOQUITA 67!</button>
+</div>
+<script>
+let score=0;
+const messages=[
+ "67 NA VEIA 💀",
+ "MILENITA SUPREMA!",
+ "PAÇOQUITA ACTIVATED 🥜",
+ "QUE ISSO MEU PARCEIRO KKKK",
+ "67 DOMINOU TUDO!",
+ "A LENDA ACORDOU 🔥"
+];
+function play(){
+ score++;
+ document.getElementById("number").innerText=
+ Math.floor(Math.random()*100);
+ document.getElementById("message").innerText=
+ messages[Math.floor(Math.random()*messages.length)];
+ document.getElementById("score").innerText=
+ "Pontos: "+score;
+}
+</script>
+</body>
+</html>
